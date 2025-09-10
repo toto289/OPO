@@ -4,16 +4,6 @@ import { getUsers } from "@/lib/api";
 import bcrypt from "bcrypt";
 import { createHash } from "crypto";
 
-function isConnRefused(err: unknown): boolean {
-  if (err && typeof err === "object") {
-    if ("code" in err && (err as any).code === "ECONNREFUSED") return true;
-    if ("errors" in err && Array.isArray((err as any).errors)) {
-      return (err as any).errors.some(e => isConnRefused(e));
-    }
-  }
-  return false;
-}
-
 export async function POST(req: NextRequest) {
   try {
     const { email, pass } = await req.json();
