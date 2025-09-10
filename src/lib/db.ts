@@ -6,9 +6,21 @@ declare global {
   var pgPool: Pool | undefined;
 }
 
+const connectionString = process.env.DATABASE_URL;
+
+if (!connectionString) {
+  throw new Error('DATABASE_URL environment variable is required');
+}
+
 const pool = global.pgPool ?? new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString,
 });
+
+if (!global.pgPool) {
+  pool.on('error', (err) => {
+    console.error('Unexpected error on idle PostgreSQL client', err);
+  });
+}
 
 if (process.env.NODE_ENV !== 'production') {
   global.pgPool = pool;
