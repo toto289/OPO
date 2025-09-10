@@ -3,6 +3,7 @@
 import db from './db';
 import type { Equipment, Store, MaintenanceLog, User, WarehouseComponent, WarehouseInsumo } from './types';
 import { cache } from 'react';
+import bcrypt from 'bcrypt';
 
 // --- Equipment ---
 export const getAllEquipment = cache(async (): Promise<Equipment[]> => {
@@ -130,8 +131,13 @@ export async function addUser(
 
   const generatedId = `user-${newUser.name.toLowerCase().replace(/\s/g, '-')}-${Math.floor(Math.random() * 1000)}`;
 
+  const hashedPassword = newUser.password
+    ? await bcrypt.hash(newUser.password, 10)
+    : undefined;
+
   const userToAdd: User = {
     ...newUser,
+    password: hashedPassword,
     id: generatedId,
     avatarUrl: '',
     cargo: newUser.cargo || '',
@@ -149,7 +155,10 @@ export async function updateUser(
   if (!user) {
     return { success: false, error: 'Usuário não encontrado.' };
   }
-  const updated = { ...user, ...updatedUserData };
+  const updated: User = { ...user, ...updatedUserData };
+  if (updatedUserData.password) {
+    updated.password = await bcrypt.hash(updatedUserData.password, 10);
+  }
   await db.query('UPDATE users SET data = $2 WHERE id = $1', [id, updated]);
   return { success: true, data: updated };
 }
