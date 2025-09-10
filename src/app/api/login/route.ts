@@ -16,6 +16,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false }, { status: 401 });
     }
   } catch (error) {
-    return NextResponse.json({ success: false, error: "Server error" }, { status: 500 });
+    console.error(error);
+    const message =
+      process.env.NODE_ENV === "development" && error instanceof Error
+        ? error.message
+        : "Server error";
+    return NextResponse.json({ success: false, error: message }, { status: 500 });
   }
 }
