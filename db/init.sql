@@ -3,7 +3,7 @@ INSERT INTO users (id, data) VALUES (
   jsonb_build_object(
     'id', 'user-1',
     'email', 'admin@paguemenos.com',
-    'password', '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8',
+    'password', '$2b$10$WIPSINi022QSRHZzDiUzUu1wvc7mMivcWJcFytf1HMrlVvbg5ijuS',
     'name', 'Administrador do Sistema',
     'cargo', 'Administrador de TI',
     'role', 'Administrador',
