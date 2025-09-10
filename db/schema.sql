@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS equipment (
+  id TEXT PRIMARY KEY,
+  data JSONB NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS stores (
+  id TEXT PRIMARY KEY,
+  data JSONB NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS users (
+  id TEXT PRIMARY KEY,
+  data JSONB NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS warehouse_components (
+  part_number TEXT PRIMARY KEY,
+  data JSONB NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS warehouse_insumos (
+  id TEXT PRIMARY KEY,
+  data JSONB NOT NULL
+);
