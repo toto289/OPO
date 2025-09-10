@@ -2,10 +2,28 @@
 
 import db from './db';
 import type { Equipment, Store, MaintenanceLog, User, WarehouseComponent, WarehouseInsumo } from './types';
-import { cache } from 'react';
+
+// Simple in-memory cache with manual invalidation. Each data loader gets a
+// unique key so that mutating operations can clear only the affected entry.
+const cacheStore = new Map<string, unknown>();
+
+function cached<T>(key: string, fn: () => Promise<T>): () => Promise<T> {
+  return async () => {
+    if (cacheStore.has(key)) {
+      return cacheStore.get(key) as T;
+    }
+    const result = await fn();
+    cacheStore.set(key, result);
+    return result;
+  };
+}
+
+function invalidateCache(key: string) {
+  cacheStore.delete(key);
+}
 
 // --- Equipment ---
-export const getAllEquipment = cache(async (): Promise<Equipment[]> => {
+export const getAllEquipment = cached('equipment', async (): Promise<Equipment[]> => {
   const res = await db.query<{ data: Equipment }>('SELECT data FROM equipment');
   return res.rows.map(r => r.data);
 });
@@ -21,6 +39,7 @@ export async function addEquipment(
   const newItem: Equipment = { ...item, preventivePlan: [] };
   try {
     await db.query('INSERT INTO equipment (id, data) VALUES ($1, $2)', [newItem.id, newItem]);
+    invalidateCache('equipment');
     return { success: true, data: newItem };
   } catch (err: any) {
     if (err.code === '23505') {
@@ -48,11 +67,13 @@ export async function updateEquipment(
 
   const updated: Equipment = { ...existing, ...updatedData };
   await db.query('UPDATE equipment SET id = $2, data = $3 WHERE id = $1', [id, updated.id, updated]);
+  invalidateCache('equipment');
   return { success: true, data: updated };
 }
 
 export async function deleteEquipment(id: string): Promise<void> {
   await db.query('DELETE FROM equipment WHERE id = $1', [id]);
+  invalidateCache('equipment');
 }
 
 export async function addMaintenanceLog(
@@ -73,10 +94,11 @@ export async function addMaintenanceLog(
   equipment.maintenanceHistory = equipment.maintenanceHistory ?? [];
   equipment.maintenanceHistory.unshift(newLog);
   await db.query('UPDATE equipment SET data = $2 WHERE id = $1', [equipment.id, equipment]);
+  invalidateCache('equipment');
 }
 
 // --- Stores ---
-export const getStores = cache(async (): Promise<Store[]> => {
+export const getStores = cached('stores', async (): Promise<Store[]> => {
   const res = await db.query<{ data: Store }>('SELECT data FROM stores');
   return res.rows.map(r => r.data);
 });
@@ -90,6 +112,7 @@ export async function addStore(store: Omit<Store, 'id'>): Promise<Store> {
   const stores = await getStores();
   const newStore: Store = { ...store, id: `loja-${stores.length + 1}` };
   await db.query('INSERT INTO stores (id, data) VALUES ($1, $2)', [newStore.id, newStore]);
+  invalidateCache('stores');
   return newStore;
 }
 
@@ -98,6 +121,7 @@ export async function updateStore(id: string, updatedStoreData: Partial<Store>):
   if (!store) return;
   const updated = { ...store, ...updatedStoreData };
   await db.query('UPDATE stores SET data = $2 WHERE id = $1', [id, updated]);
+  invalidateCache('stores');
 }
 
 export async function deleteStore(id: string): Promise<{ success: boolean; message?: string }> {
@@ -106,11 +130,12 @@ export async function deleteStore(id: string): Promise<{ success: boolean; messa
     return { success: false, message: 'Esta loja não pode ser excluída pois há equipamentos associados a ela.' };
   }
   await db.query('DELETE FROM stores WHERE id = $1', [id]);
+  invalidateCache('stores');
   return { success: true };
 }
 
 // --- Users ---
-export const getUsers = cache(async (): Promise<User[]> => {
+export const getUsers = cached('users', async (): Promise<User[]> => {
   const res = await db.query<{ data: User }>('SELECT data FROM users');
   return res.rows.map(r => r.data);
 });
@@ -138,6 +163,7 @@ export async function addUser(
   };
 
   await db.query('INSERT INTO users (id, data) VALUES ($1, $2)', [userToAdd.id, userToAdd]);
+  invalidateCache('users');
   return { success: true, data: userToAdd };
 }
 
@@ -151,11 +177,12 @@ export async function updateUser(
   }
   const updated = { ...user, ...updatedUserData };
   await db.query('UPDATE users SET data = $2 WHERE id = $1', [id, updated]);
+  invalidateCache('users');
   return { success: true, data: updated };
 }
 
 // --- Warehouse Components ---
-export const getWarehouseComponents = cache(async (): Promise<WarehouseComponent[]> => {
+export const getWarehouseComponents = cached('warehouse_components', async (): Promise<WarehouseComponent[]> => {
   const res = await db.query<{ data: WarehouseComponent }>('SELECT data FROM warehouse_components');
   return res.rows.map(r => r.data);
 });
@@ -171,7 +198,7 @@ export async function getWarehouseComponentByPartNumber(
 }
 
 // --- Warehouse Insumos ---
-export const getWarehouseInsumos = cache(async (): Promise<WarehouseInsumo[]> => {
+export const getWarehouseInsumos = cached('warehouse_insumos', async (): Promise<WarehouseInsumo[]> => {
   const res = await db.query<{ data: WarehouseInsumo }>('SELECT data FROM warehouse_insumos');
   return res.rows.map(r => r.data);
 });
