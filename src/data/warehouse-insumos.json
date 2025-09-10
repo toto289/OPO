@@ -1,0 +1,66 @@
+
+[
+    {
+        "id": "ins-graxa-01",
+        "name": "Graxa para Rolamentos",
+        "type": "Lubrificante",
+        "description": "Graxa a base de lítio para alta temperatura",
+        "quantityInStock": 12,
+        "reorderPoint": 5,
+        "cost": 25.00
+    },
+    {
+        "id": "ins-oleo-comp-01",
+        "name": "Óleo para Compressor",
+        "type": "Lubrificante",
+        "description": "Óleo mineral ISO VG 100",
+        "quantityInStock": 7,
+        "reorderPoint": 4,
+        "cost": 45.00
+    },
+    {
+        "id": "ins-filtro-ar-01",
+        "name": "Filtro de Ar para Compressor",
+        "type": "Filtro",
+        "description": "Filtro de ar de papel para compressor COMP-25L",
+        "quantityInStock": 25,
+        "reorderPoint": 10,
+        "cost": 25.00
+    },
+    {
+        "id": "OL-RED-FG-220",
+        "name": "Óleo Lubrificante Sintético para Redutores",
+        "type": "Óleo",
+        "description": "Óleo sintético de grau alimentício H1, ISO VG 220",
+        "quantityInStock": 8,
+        "reorderPoint": 4,
+        "cost": 210.00
+    },
+    {
+        "id": "GR-MANC-FG-2",
+        "name": "Graxa Lubrificante Alimentícia",
+        "type": "Graxa",
+        "description": "Graxa de grau alimentício H1, NLGI 2",
+        "quantityInStock": 4,
+        "reorderPoint": 2,
+        "cost": 80.00
+    },
+    {
+        "id": "OL-HIDR-FG-46",
+        "name": "Fluido Hidráulico Grau Alimentício",
+        "type": "Fluído",
+        "description": "Fluido hidráulico de grau alimentício H1, ISO VG 46",
+        "quantityInStock": 6,
+        "reorderPoint": 3,
+        "cost": 150.00
+    },
+    {
+        "id": "FIL-AR-CAB-MOT",
+        "name": "Filtro de Ar para Resfriamento do Motor",
+        "type": "Filtro",
+        "description": "Filtro de proteção para motor elétrico da masseira",
+        "quantityInStock": 3,
+        "reorderPoint": 5,
+        "cost": 75.00
+    }
+]

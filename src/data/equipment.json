@@ -1,0 +1,412 @@
+[
+  {
+    "id": "13543",
+    "name": "Furadeira de Impacto 500W",
+    "description": "Furadeira de impacto de 500W, ideal para perfurações em concreto, alvenaria e metal. Mandril de 1/2 polegada.",
+    "imageUrl": "",
+    "imageHint": "power drill",
+    "storeId": "loja-1",
+    "model": "FI-500",
+    "value": 350,
+    "maintenanceHistory": [
+      {
+        "userRequest": "bbbbbbbbbbbbbbbbbb",
+        "generatedLog": "A descrição do serviço fornecida ('bbbbbbbbbbbbbbbbbb') é insuficiente para gerar uma entrada de log de manutenção técnica e específica.",
+        "componentId": "comp-01",
+        "componentName": "Mandril 1/2\"",
+        "tempoGasto": 0,
+        "cost": 85.5,
+        "id": "log-1757376531930",
+        "date": "2025-09-09T00:08:51.930Z"
+      },
+      {
+        "userRequest": "aaaaaaaaaaaaaaaaaaaa",
+        "generatedLog": "A descrição do serviço fornecida, 'aaaaaaaaaaaaaaaaaaaa', é ininteligível e impede a identificação da manutenção realizada.",
+        "tempoGasto": 0,
+        "id": "log-1757376514902",
+        "date": "2025-09-09T00:08:34.902Z"
+      },
+      {
+        "userRequest": "Testeasdasdas",
+        "generatedLog": "Descrição do serviço fornecida ('Testeasdasdas') é ininteligível, impedindo o registro de manutenção específica para o mandril 1/2\".",
+        "componentId": "comp-01",
+        "componentName": "Mandril 1/2\"",
+        "tempoGasto": 0,
+        "cost": 85.5,
+        "id": "log-1757376337220",
+        "date": "2025-09-09T00:05:37.220Z"
+      },
+      {
+        "userRequest": "substituição de rolamento",
+        "generatedLog": "Realizada a substituição do rolamento da Furadeira de Impacto 500W.",
+        "componentId": "manual-comp-1757264697655",
+        "componentName": "oi",
+        "tempoGasto": 2,
+        "cost": 200,
+        "id": "log-1757264720343",
+        "date": "2025-09-07T17:05:20.343Z"
+      },
+      {
+        "userRequest": "Substituição do insumo: Graxa para Rolamentos",
+        "generatedLog": "Realizada a substituição da graxa lubrificante dos rolamentos da Furadeira de Impacto 500W.",
+        "tempoGasto": 0.5,
+        "cost": 25,
+        "id": "log-1757262824727",
+        "date": "2025-09-07T16:33:44.727Z"
+      },
+      {
+        "id": "log-furadeira-1",
+        "date": "2024-09-18T10:00:00.000Z",
+        "userRequest": "Troquei a escova de carvão que estava gasta.",
+        "generatedLog": "Substituição das escovas de carvão devido a desgaste natural.",
+        "tempoGasto": 1,
+        "cost": 32
+      },
+      {
+        "id": "log-furadeira-2",
+        "date": "2024-08-15T10:00:00.000Z",
+        "userRequest": "Troquei a escova de carvão que estava gasta.",
+        "generatedLog": "Substituição das escovas de carvão devido a desgaste natural.",
+        "tempoGasto": 1,
+        "cost": 32
+      },
+      {
+        "id": "log-furadeira-3",
+        "date": "2024-05-20T14:30:00.000Z",
+        "userRequest": "O mandril não estava segurando a broca direito, apertei ele.",
+        "generatedLog": "Reaperto e ajuste do mandril para garantir fixação correta da broca.",
+        "tempoGasto": 0.5
+      },
+      {
+        "id": "log-furadeira-4",
+        "date": "2024-02-10T09:00:00.000Z",
+        "userRequest": "Limpeza geral e lubrificação.",
+        "generatedLog": "Executada limpeza interna e lubrificação dos componentes móveis.",
+        "tempoGasto": 0.75
+      }
+    ],
+    "location": {
+      "manualAddress": "Almoxarifado Central, Prateleira A-3"
+    },
+    "components": [
+      {
+        "id": "comp-01",
+        "name": "Mandril 1/2\"",
+        "partNumber": "MND-500-12",
+        "description": "Mandril de aperto rápido"
+      },
+      {
+        "id": "comp-02",
+        "name": "Escova de Carvão",
+        "partNumber": "EC-500W-01",
+        "description": "Par de escovas de carvão para motor"
+      },
+      {
+        "id": "manual-comp-1757264306517",
+        "name": "Teste",
+        "partNumber": "",
+        "description": ""
+      }
+    ],
+    "insumos": [
+      {
+        "id": "ins-01",
+        "name": "Graxa para Rolamentos",
+        "type": "Lubrificante",
+        "description": "Graxa a base de lítio para alta temperatura"
+      }
+    ],
+    "preventivePlan": [
+      {
+        "id": "prev-task-1757298375667",
+        "taskName": "Inspecionar fiação",
+        "frequencyDays": 30,
+        "lastExecution": "2025-09-08T02:26:15.667Z"
+      }
+    ]
+  },
+  {
+    "id": "serra-circular-01",
+    "name": "Serra Circular 7 1/4\"",
+    "description": "Serra circular com motor de 1800W, profundidade de corte de 65mm. Acompanha disco de 24 dentes.",
+    "imageUrl": "",
+    "imageHint": "circular saw",
+    "storeId": "loja-2",
+    "model": "SC-1800",
+    "value": 680.5,
+    "maintenanceHistory": [
+      {
+        "id": "log-serra-1",
+        "date": "2024-07-22T11:00:00.000Z",
+        "userRequest": "Disco novo, o antigo estava cego.",
+        "generatedLog": "Substituição do disco de serra por um novo modelo de 24 dentes.",
+        "tempoGasto": 0.5
+      },
+      {
+        "id": "log-serra-2",
+        "date": "2024-03-01T16:00:00.000Z",
+        "userRequest": "Ajustei a guia de corte, estava desalinhada.",
+        "generatedLog": "Calibragem e alinhamento da guia de corte para precisão.",
+        "tempoGasto": 0.5
+      }
+    ],
+    "location": {
+      "manualAddress": "Oficina 2, Bancada de Ferramentas"
+    },
+    "components": [
+      {
+        "id": "comp-03",
+        "name": "Disco de Serra 7 1/4\"",
+        "partNumber": "DS-184-24T",
+        "description": "Disco com 24 dentes para madeira"
+      }
+    ],
+    "insumos": []
+  },
+  {
+    "id": "compressor-de-ar-01",
+    "name": "Compressor de Ar 25L",
+    "description": "Compressor de ar de 25 litros e 2.5HP. Pressão máxima de 120 PSI. Ideal para pintura e ferramentas pneumáticas.",
+    "imageUrl": "",
+    "imageHint": "air compressor",
+    "storeId": "loja-1",
+    "model": "COMP-25L",
+    "value": 1250,
+    "maintenanceHistory": [
+      {
+        "id": "log-compressor-1",
+        "date": "2024-09-01T08:00:00.000Z",
+        "userRequest": "Substituição do insumo: Óleo para Compressor",
+        "generatedLog": "Realizada a troca do óleo lubrificante do cárter do compressor.",
+        "tempoGasto": 1.5,
+        "cost": 45
+      },
+      {
+        "id": "log-compressor-2",
+        "date": "2024-08-15T13:45:00.000Z",
+        "userRequest": "Substituição do insumo: Filtro de Ar para Compressor",
+        "generatedLog": "Efetuada a troca do filtro de ar de admissão.",
+        "tempoGasto": 0.5,
+        "cost": 25
+      },
+      {
+        "id": "log-compressor-3",
+        "date": "2024-07-15T13:45:00.000Z",
+        "userRequest": "Substituição do insumo: Filtro de Ar para Compressor",
+        "generatedLog": "Efetuada a troca do filtro de ar de admissão.",
+        "tempoGasto": 0.5,
+        "cost": 25
+      },
+      {
+        "id": "log-compressor-4",
+        "date": "2024-06-15T13:45:00.000Z",
+        "userRequest": "Limpeza do filtro de ar, estava muito sujo.",
+        "generatedLog": "Efetuada a limpeza e inspeção do filtro de ar de admissão.",
+        "tempoGasto": 0.5
+      },
+      {
+        "id": "log-compressor-5",
+        "date": "2024-02-28T10:20:00.000Z",
+        "userRequest": "Vazamento na mangueira, troquei a conexão.",
+        "generatedLog": "Substituição do conector da mangueira de saída para sanar vazamento de ar.",
+        "tempoGasto": 0.5
+      },
+      {
+        "id": "log-compressor-6",
+        "date": "2023-11-10T15:00:00.000Z",
+        "userRequest": "Ajuste na válvula de pressão.",
+        "generatedLog": "Calibragem da válvula reguladora de pressão de saída.",
+        "tempoGasto": 1
+      },
+      {
+        "id": "log-compressor-7",
+        "date": "2024-09-10T11:00:00.000Z",
+        "userRequest": "Substituição do insumo: Óleo para Compressor",
+        "generatedLog": "Realizada a troca do óleo lubrificante do cárter do compressor.",
+        "tempoGasto": 1.5,
+        "cost": 45
+      },
+      {
+        "id": "log-compressor-8",
+        "date": "2024-09-20T13:45:00.000Z",
+        "userRequest": "Substituição do insumo: Filtro de Ar para Compressor",
+        "generatedLog": "Efetuada a troca do filtro de ar de admissão.",
+        "tempoGasto": 0.5,
+        "cost": 25
+      }
+    ],
+    "location": {
+      "manualAddress": "Garagem"
+    },
+    "components": [],
+    "insumos": [
+      {
+        "id": "ins-02",
+        "name": "Óleo para Compressor",
+        "type": "Lubrificante",
+        "description": "Óleo mineral ISO VG 100"
+      },
+      {
+        "id": "ins-03",
+        "name": "Filtro de Ar para Compressor",
+        "type": "Filtro",
+        "description": "Filtro de ar de papel"
+      }
+    ]
+  },
+  {
+    "id": "esmerilhadeira-angular-01",
+    "name": "Esmerilhadeira Angular 4 1/2\"",
+    "description": "Esmerilhadeira angular de 4 1/2 polegadas, 820W de potência. Utilizada para cortes e desbastes em metais.",
+    "imageUrl": "",
+    "imageHint": "angle grinder",
+    "storeId": "loja-4",
+    "model": "ESM-820",
+    "value": 450,
+    "maintenanceHistory": [
+      {
+        "id": "log-esmerilhadeira-1",
+        "date": "2024-08-05T16:00:00.000Z",
+        "userRequest": "Troquei o disco de corte.",
+        "generatedLog": "Substituição do disco de corte abrasivo.",
+        "tempoGasto": 0.25
+      }
+    ],
+    "location": {
+      "manualAddress": "Veículo de Manutenção 03"
+    },
+    "components": [],
+    "insumos": []
+  },
+  {
+    "id": "Q151",
+    "name": "Masseira Industrial para Pão",
+    "description": "Masseira industrial robusta, especificamente projetada para o amassamento e mistura de grandes volumes de massa para pães, pizzas e outros produtos de panificação. Construída em aço inoxidável de grau alimentício, oferece máxima higiene, durabilidade e resistência à corrosão, essenciais para o setor alimentício. Equipada com sistema de mistura em espiral (braço espiral) de alta performance, garante um amassamento homogêneo e eficiente, otimizando o desenvolvimento da rede de glúten. Apresenta múltiplas velocidades de operação, temporizador programável digital e um painel de controle intuitivo para ajuste preciso do processo. Inclui dispositivos de segurança como grade de proteção intertravada e botão de parada de emergência. Ideal para padarias, confeitarias e indústrias de alimentos, com capacidades comuns variando entre 50 kg e 200 kg de massa por ciclo, operando geralmente com alimentação trifásica para desempenho contínuo e estável.",
+    "storeId": "loja-1",
+    "model": "Masseira Basculante MS-120",
+    "value": 45000,
+    "components": [
+      {
+        "id": "MOTOR-001",
+        "name": "Motor Elétrico Principal",
+        "partNumber": "MOT-MS120-220V",
+        "description": "Motor de alta potência para acionamento do braço misturador e mecanismo basculante."
+      },
+      {
+        "id": "REDUTOR-002",
+        "name": "Redutor de Velocidade",
+        "partNumber": "RED-MS120-001",
+        "description": "Componente responsável por ajustar a rotação do motor para a velocidade ideal de mistura."
+      },
+      {
+        "id": "CUBA-003",
+        "name": "Cuba de Mistura em Aço Inoxidável",
+        "partNumber": "CUB-MS120-001",
+        "description": "Recipiente principal em aço inoxidável de alta capacidade para processamento da massa."
+      },
+      {
+        "id": "BRACO-004",
+        "name": "Braço Misturador Espiral",
+        "partNumber": "BRA-MS120-001",
+        "description": "Ferramenta em formato espiral para efetuar a mistura e sova homogênea da massa."
+      },
+      {
+        "id": "MECANISMO-BASC-005",
+        "name": "Mecanismo Basculante Hidráulico/Mecânico",
+        "partNumber": "MEC-MS120-001",
+        "description": "Sistema para inclinação controlada da cuba, facilitando a descarga da massa e limpeza."
+      },
+      {
+        "id": "PAINEL-006",
+        "name": "Painel de Controle Digital",
+        "partNumber": "PNL-MS120-001",
+        "description": "Interface com botões e display para operação, programação de ciclos e monitoramento da masseira."
+      },
+      {
+        "id": "ESTRUTURA-007",
+        "name": "Estrutura Principal e Chassi",
+        "partNumber": "EST-MS120-001",
+        "description": "Chassi robusto e estrutura de suporte que abriga todos os componentes, garantindo estabilidade."
+      },
+      {
+        "id": "CORREIA-008",
+        "name": "Correia de Transmissão Principal",
+        "partNumber": "COR-MS120-001",
+        "description": "Correia de alta resistência para transferência de potência do motor para o sistema de mistura."
+      },
+      {
+        "id": "ROLAMENTO-009",
+        "name": "Conjunto de Rolamentos do Eixo",
+        "partNumber": "ROL-MS120-001",
+        "description": "Rolamentos de precisão para garantir rotação suave e durabilidade dos eixos do braço e da cuba."
+      },
+      {
+        "id": "PES-010",
+        "name": "Pés Niveladores Ajustáveis",
+        "partNumber": "PES-MS120-001",
+        "description": "Pés ajustáveis e emborrachados para estabilização, nivelamento do equipamento e redução de vibração."
+      }
+    ],
+    "insumos": [
+      {
+        "id": "OL-RED-FG-220",
+        "name": "Óleo Lubrificante Sintético para Redutores",
+        "type": "Óleo",
+        "description": "Óleo sintético de grau alimentício H1, ISO VG 220, para lubrificação de redutores e caixas de engrenagens."
+      },
+      {
+        "id": "GR-MANC-FG-2",
+        "name": "Graxa Lubrificante Alimentícia",
+        "type": "Graxa",
+        "description": "Graxa de grau alimentício H1, NLGI 2, para lubrificação de mancais e rolamentos expostos a contato incidental com alimentos."
+      },
+      {
+        "id": "OL-HIDR-FG-46",
+        "name": "Fluido Hidráulico Grau Alimentício",
+        "type": "Fluído",
+        "description": "Fluido hidráulico de grau alimentício H1, ISO VG 46, para sistemas de basculamento e elevação da masseira."
+      },
+      {
+        "id": "FIL-AR-CAB-MOT",
+        "name": "Filtro de Ar para Resfriamento do Motor",
+        "type": "Filtro",
+        "description": "Filtro para proteger o motor elétrico contra poeira e partículas, garantindo o resfriamento adequado."
+      }
+    ],
+    "imageUrl": "",
+    "imageHint": "Masseira Industrial",
+    "maintenanceHistory": [
+      {
+        "id": "log-11",
+        "date": "2024-09-02T10:00:00.000Z",
+        "userRequest": "Ajuste na tensão da correia principal.",
+        "generatedLog": "Realizado o tensionamento da correia de transmissão do motor principal.",
+        "tempoGasto": 1.5
+      },
+      {
+        "id": "log-12",
+        "date": "2024-06-03T14:00:00.000Z",
+        "userRequest": "Substituição do insumo: Fluido Hidráulico Grau Alimentício",
+        "generatedLog": "Verificação e complementação do nível do fluído hidráulico do sistema basculante.",
+        "tempoGasto": 1,
+        "cost": 150
+      },
+      {
+        "id": "log-13",
+        "date": "2024-03-05T09:30:00.000Z",
+        "userRequest": "Substituição do insumo: Graxa Lubrificante Alimentícia",
+        "generatedLog": "Aplicação de graxa alimentícia nos rolamentos do eixo espiral.",
+        "tempoGasto": 1.2,
+        "cost": 80
+      },
+      {
+        "id": "log-14",
+        "date": "2024-09-05T09:30:00.000Z",
+        "userRequest": "Substituição do insumo: Graxa Lubrificante Alimentícia",
+        "generatedLog": "Aplicação de graxa alimentícia nos rolamentos do eixo espiral.",
+        "tempoGasto": 1.2,
+        "cost": 80
+      }
+    ]
+  }
+]

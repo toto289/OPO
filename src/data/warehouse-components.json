@@ -1,0 +1,74 @@
+[
+  {
+    "partNumber": "MND-500-12",
+    "name": "Mandril 1/2\"",
+    "description": "Mandril de aperto rápido para Furadeira FI-500",
+    "quantityInStock": 13,
+    "reorderPoint": 5,
+    "cost": 85.5
+  },
+  {
+    "partNumber": "EC-500W-01",
+    "name": "Escova de Carvão (Par)",
+    "description": "Par de escovas de carvão para motor de 500W",
+    "quantityInStock": 18,
+    "reorderPoint": 10,
+    "cost": 32
+  },
+  {
+    "partNumber": "DS-184-24T",
+    "name": "Disco de Serra 7 1/4\"",
+    "description": "Disco com 24 dentes para madeira",
+    "quantityInStock": 22,
+    "reorderPoint": 10,
+    "cost": 55
+  },
+  {
+    "partNumber": "MOT-MS120-220V",
+    "name": "Motor Elétrico Principal",
+    "description": "Motor de alta potência para masseira MS-120",
+    "quantityInStock": 2,
+    "reorderPoint": 1,
+    "cost": 3200
+  },
+  {
+    "partNumber": "RED-MS120-001",
+    "name": "Redutor de Velocidade",
+    "description": "Componente para masseira MS-120",
+    "quantityInStock": 3,
+    "reorderPoint": 2,
+    "cost": 1800
+  },
+  {
+    "partNumber": "CUB-MS120-001",
+    "name": "Cuba de Mistura em Aço Inox",
+    "description": "Cuba de alta capacidade para masseira MS-120",
+    "quantityInStock": 1,
+    "reorderPoint": 1,
+    "cost": 5500
+  },
+  {
+    "partNumber": "BRA-MS120-001",
+    "name": "Braço Misturador Espiral",
+    "description": "Ferramenta para mistura de massa para masseira MS-120",
+    "quantityInStock": 4,
+    "reorderPoint": 2,
+    "cost": 950
+  },
+  {
+    "partNumber": "COR-MS120-001",
+    "name": "Correia de Transmissão Principal",
+    "description": "Correia de alta resistência para masseira",
+    "quantityInStock": 12,
+    "reorderPoint": 5,
+    "cost": 120
+  },
+  {
+    "partNumber": "ROL-MS120-001",
+    "name": "Conjunto de Rolamentos do Eixo",
+    "description": "Rolamentos de precisão para masseira",
+    "quantityInStock": 8,
+    "reorderPoint": 10,
+    "cost": 250
+  }
+]

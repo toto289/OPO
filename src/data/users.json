@@ -1,0 +1,83 @@
+[
+  {
+    "id": "user-1",
+    "email": "admin@paguemenos.com",
+    "password": "password",
+    "name": "Administrador do Sistema",
+    "cargo": "Administrador de TI",
+    "role": "Administrador",
+    "avatarUrl": ""
+  },
+  {
+    "id": "user-ger-manut",
+    "email": "fernando.costa@paguemenos.com",
+    "password": "password123",
+    "name": "Fernando Costa",
+    "cargo": "Gerente de Manutenção",
+    "role": "Gerente de Manutenção",
+    "avatarUrl": ""
+  },
+  {
+    "id": "user-ger-refrig",
+    "email": "lucia.almeida@paguemenos.com",
+    "password": "password123",
+    "name": "Lúcia Almeida",
+    "cargo": "Gerente de Refrigeração",
+    "role": "Gerente de Refrigeração",
+    "avatarUrl": ""
+  },
+  {
+    "id": "user-ger-regional",
+    "email": "roberto.santos@paguemenos.com",
+    "password": "password123",
+    "name": "Roberto Santos",
+    "cargo": "Gerente Regional - SP Interior",
+    "role": "Gerente Regional",
+    "avatarUrl": ""
+  },
+  {
+    "id": "user-2",
+    "email": "carlos.pereira@paguemenos.com",
+    "password": "password123",
+    "name": "Carlos Pereira",
+    "cargo": "Gerente Loja 2",
+    "role": "Gerente de Loja",
+    "avatarUrl": ""
+  },
+  {
+    "id": "user-lider-manut",
+    "email": "marcos.ribeiro@paguemenos.com",
+    "password": "password123",
+    "name": "Marcos Ribeiro",
+    "cargo": "Líder de Manutenção Eletromecânica",
+    "role": "Líder de Manutenção",
+    "avatarUrl": ""
+  },
+  {
+    "id": "user-analista-manut",
+    "email": "ana.oliveira@paguemenos.com",
+    "password": "password123",
+    "name": "Ana Oliveira",
+    "cargo": "Analista de PCM",
+    "role": "Analista de Manutenção",
+    "avatarUrl": ""
+  },
+  {
+    "id": "user-3",
+    "email": "beatriz.lima@paguemenos.com",
+    "password": "password123",
+    "name": "Beatriz Lima",
+    "cargo": "Técnica de Refrigeração",
+    "role": "Técnico de Manutenção",
+    "avatarUrl": ""
+  },
+  {
+    "id": "user-ajudante",
+    "email": "joao.silva@paguemenos.com",
+    "password": "password123",
+    "name": "João da Silva",
+    "cargo": "Ajudante Geral de Manutenção",
+    "role": "Ajudante",
+    "avatarUrl": ""
+  }
+]
