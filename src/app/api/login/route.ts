@@ -36,10 +36,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: false }, { status: 401 });
   } catch (error) {
     console.error(error);
+    const dbDown = isConnRefused(error);
+    const defaultMessage = dbDown ? "Database connection failed" : "Server error";
     const message =
       process.env.NODE_ENV === "development" && error instanceof Error
         ? error.message
-        : "Server error";
-    return NextResponse.json({ success: false, error: message }, { status: 500 });
+        : defaultMessage;
+    return NextResponse.json(
+      { success: false, error: message },
+      { status: dbDown ? 503 : 500 }
+    );
   }
 }
