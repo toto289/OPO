@@ -2,6 +2,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getUsers } from "@/lib/api";
 import bcrypt from "bcrypt";
+import { createHash } from "crypto";
 
 export async function POST(req: NextRequest) {
   try {
@@ -9,13 +10,30 @@ export async function POST(req: NextRequest) {
     const users = await getUsers();
     const user = users.find(u => u.email === email);
 
-    if (user && user.password && (await bcrypt.compare(pass, user.password))) {
+    let passwordMatch = false;
+
+    if (user?.password) {
+      try {
+        if (user.password.startsWith("$2")) {
+          passwordMatch = await bcrypt.compare(pass, user.password);
+        } else if (/^[a-f0-9]{64}$/i.test(user.password)) {
+          const hashed = createHash("sha256").update(pass).digest("hex");
+          passwordMatch = hashed === user.password;
+        } else {
+          passwordMatch = pass === user.password;
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    if (passwordMatch) {
       // In a real app, you'd create a session/JWT token here.
       // For this demo, we'll just confirm success.
       return NextResponse.json({ success: true });
-    } else {
-      return NextResponse.json({ success: false }, { status: 401 });
     }
+
+    return NextResponse.json({ success: false }, { status: 401 });
   } catch (error) {
     console.error(error);
     const message =
